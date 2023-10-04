@@ -10,6 +10,7 @@ const useData = () => {
       const response = await Axios.get(
         'https://atomic-test-api.onrender.com/names',
       );
+      console.log(response.data);
       setData(response.data);
     } catch (error) {
       Alert.alert('Error', 'No se pudo obtener la información');

@@ -3,11 +3,8 @@ import {
   Dimensions,
   ImageBackground,
   SafeAreaView,
-  Text,
   StyleSheet,
-  View,
 } from 'react-native';
-import {colors} from '../../../utils/colors';
 import Footer from '../atoms/Footer';
 
 const image = require('../../../assets/background.png');
