@@ -1,14 +1,16 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {colors} from '../../../utils/colors';
+import {useNavigation} from '@react-navigation/native';
 
 const Button = () => {
+  const navigation: any = useNavigation();
   return (
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-          console.log('Button pressed');
+          navigation.navigate('PersonalData');
         }}>
         <Text style={styles.text}>¡Quiero ser parte!</Text>
       </TouchableOpacity>

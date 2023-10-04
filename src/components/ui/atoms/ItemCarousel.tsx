@@ -16,8 +16,8 @@ const ItemCarousel = ({item}: Props) => {
       <Image source={item.img} resizeMode="contain" style={styles.image} />
       <Text style={styles.title}>{item.title}</Text>
       <View>
-        {item.dots.map(dot => (
-          <View style={styles.containerDots}>
+        {item.dots.map((dot, index) => (
+          <View key={index} style={styles.containerDots}>
             <View style={styles.dot} />
             <Text style={styles.textDots}>{dot}</Text>
           </View>

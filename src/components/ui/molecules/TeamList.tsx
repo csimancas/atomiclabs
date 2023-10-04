@@ -1,28 +1,31 @@
 import React from 'react';
-import {FlatList, View} from 'react-native';
+import {FlatList, View, StyleSheet} from 'react-native';
 import ItemTeam from '../atoms/ItemTeam';
 
 interface Props {
   data: Array<{
     name: string;
-    image: string;
-    role: string;
+    avatar: string;
+    position: string;
   }>;
 }
 
 const TeamList = ({data}: Props) => {
   return (
-    <View
-      style={{
-        paddingHorizontal: 25,
-      }}>
+    <View style={styles.list}>
       <FlatList
         data={data}
         renderItem={({item}) => <ItemTeam item={item} />}
-        keyExtractor={item => item.image}
+        keyExtractor={item => item.avatar}
       />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  list: {
+    paddingHorizontal: 25,
+  },
+});
 
 export default TeamList;
