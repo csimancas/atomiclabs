@@ -1,30 +1,30 @@
 import React from 'react';
 import {
-  Dimensions,
-  ImageBackground,
-  SafeAreaView,
-  ScrollView,
   StyleSheet,
+  SafeAreaView,
+  ImageBackground,
+  Dimensions,
+  ScrollView,
 } from 'react-native';
-import ProgressBar from '../atoms/ProgressBar';
-import PersonalDataForm from '../molecules/PersonalDataForm';
 
+import ProgressBar from '../atoms/ProgressBar';
+import PhoneForm from '../molecules/PhoneForm';
 import Footer from '../atoms/Footer';
 
 const image = require('../../../assets/background.png');
 const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
-const WeWantoToKnowYou = () => {
+const ValidationPhoneForm = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
         <ScrollView>
           <ProgressBar
-            step={1}
-            progress={0.4}
-            whiteTitle="TE QUEREMOS"
-            orangeTitle="CONOCER"
+            step={2}
+            progress={1}
+            whiteTitle="VALIDA TU"
+            orangeTitle="CELULAR"
           />
-          <PersonalDataForm />
+          <PhoneForm />
           <Footer />
         </ScrollView>
       </ImageBackground>
@@ -43,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default WeWantoToKnowYou;
+export default ValidationPhoneForm;

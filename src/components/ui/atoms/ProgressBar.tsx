@@ -4,29 +4,39 @@ import {colors} from '../../../utils/colors';
 
 const oneCircle = require('../../../assets/OneCircle.png');
 const twoGray = require('../../../assets/TwoGray.png');
+const twoOrange = require('../../../assets/TwoOrange.png');
+const checkmark = require('../../../assets/checkmark.png');
+const twoOrangeCircle = require('../../../assets/TwoOrangeCircle.png');
 
-const MyProgressBar = () => {
+interface Props {
+  progress: number;
+  whiteTitle: string;
+  orangeTitle: string;
+  step: number;
+}
+const ProgressBar = ({progress, whiteTitle, orangeTitle, step}: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.numbersContainer}>
-        <Image source={oneCircle} style={styles.one} />
-        <Image source={twoGray} style={styles.two} />
+        <Image source={step === 2 ? checkmark : oneCircle} style={styles.one} />
+        <Image source={step === 2 ? twoOrange : twoGray} style={styles.two} />
       </View>
 
       <View style={styles.progressBar}>
-        <View style={{...styles.progress, width: `${0.4 * 100}%`}} />
+        <View style={{...styles.progress, width: `${progress * 100}%`}} />
       </View>
 
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-        <Image source={oneCircle} style={styles.stepOne} />
+      <View style={styles.stepContainer}>
+        <Image
+          source={step === 2 ? twoOrangeCircle : oneCircle}
+          style={styles.stepOne}
+        />
         <Text style={styles.containerText}>
-          <Text style={styles.title}>TE QUEREMOS</Text>
-          <Text style={styles.orangeOne}> CONOCER</Text>
+          <Text>
+            {whiteTitle}
+            {'\n'}
+          </Text>
+          <Text style={styles.orangeOne}> {orangeTitle}</Text>
         </Text>
       </View>
     </View>
@@ -36,9 +46,7 @@ const MyProgressBar = () => {
 const styles = StyleSheet.create({
   container: {
     height: 150,
-
     marginTop: 40,
-
     paddingHorizontal: 10,
   },
   numbersContainer: {
@@ -83,14 +91,16 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginLeft: 20,
   },
-  title: {
-    letterSpacing: 5,
-  },
   orangeOne: {
     fontSize: 30,
     fontWeight: 'bold',
     color: colors.orange,
   },
+  stepContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
-export default MyProgressBar;
+export default ProgressBar;
