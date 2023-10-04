@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text, Alert} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
 import {colors} from '../../../utils/colors';
 
 import {useNavigation} from '@react-navigation/native';
@@ -17,13 +17,13 @@ const PhoneForm = () => {
       <Text style={styles.title}>
         Ingresa tu número a 10 dígitos y te{'\n'} enviaremos un código SMS
       </Text>
-      <View
-        style={{
-          paddingHorizontal: 15,
-        }}>
+      <View style={styles.inputContainer}>
         <Input placeholder="Número de Celular" />
       </View>
-      <OrangeButton title="Continuar" action={() => console.log('gola')} />
+      <OrangeButton
+        title="Continuar"
+        action={() => navigation.navigate('CompletePostulation')}
+      />
       <AstroMoonImage />
     </View>
   );
@@ -42,7 +42,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     marginBottom: 10,
   },
-  buttonContainer: {},
+  inputContainer: {
+    paddingHorizontal: 15,
+  },
 });
 
 export default PhoneForm;

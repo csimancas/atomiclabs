@@ -1,9 +1,11 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import Home from '../screens/Home';
 import PersonalData from '../screens/PersonalData';
 import ValidatePhone from '../screens/ValidatePhone';
+import CompletePostulation from '../screens/CompletePostulation';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +30,13 @@ const Navigation = () => {
         <Stack.Screen
           name="ValidatePhone"
           component={ValidatePhone}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="CompletePostulation"
+          component={CompletePostulation}
           options={{
             headerShown: false,
           }}
