@@ -16,6 +16,8 @@ import Footer from '../atoms/Footer';
 import TextIntroduction from '../atoms/TextIntroduction';
 import TextSecondary from '../atoms/TextSecondary';
 import AstroImage from '../atoms/AstroImage';
+import TeamImage from '../atoms/TeamImage';
+import OurTeam from '../atoms/OurTeam';
 
 const image = require('../../../assets/background.png');
 
@@ -32,6 +34,9 @@ const Introduction = () => {
           <Button />
           <TextSecondary />
           <Carousel />
+          <TeamImage />
+          <Button />
+          <OurTeam />
           <Footer />
         </ScrollView>
       </ImageBackground>
@@ -50,18 +55,6 @@ const styles = StyleSheet.create({
     width: screenWidth,
     height: screenHeight,
   },
-  astro: {
-    width: screenWidth,
-    height: screenHeight,
-  },
-  text: {
-    paddingHorizontal: 15,
-    textAlign: 'justify',
-    fontSize: 42,
-    fontWeight: 'bold',
-    color: 'white',
-  },
-  textOrange: {},
 });
 
 export default Introduction;

@@ -15,8 +15,6 @@ const Carousel = () => {
     setCurrentIndex(index);
   };
 
-  console.log(CarouselData.length);
-
   const renderDots = () => {
     return (
       <View style={styles.dotsContainer}>
@@ -51,9 +49,6 @@ const Carousel = () => {
             <ItemCarousel item={item} />
           </View>
         ))}
-        {/* <View style={styles.slide}>
-          <ItemCarousel />
-        </View> */}
       </ScrollView>
 
       {renderDots()}
