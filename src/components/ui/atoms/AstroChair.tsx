@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Image, StyleSheet} from 'react-native';
 
 const astroImg = require('../../../assets/AstroChair.png');
+
 const AstroChair = () => {
   return (
     <View style={styles.container}>
@@ -14,15 +15,11 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: 400,
-    width: 200,
-    position: 'absolute',
-    top: 270,
-    left: 100,
+    marginTop: -120,
   },
   image: {
-    width: 350,
-    height: 550,
+    width: '90%',
+    height: '90%',
   },
 });
 

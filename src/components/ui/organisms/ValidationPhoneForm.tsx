@@ -13,11 +13,12 @@ import Footer from '../atoms/Footer';
 
 const image = require('../../../assets/background.png');
 const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
+
 const ValidationPhoneForm = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-        <ScrollView>
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
           <ProgressBar
             step={2}
             progress={1}
@@ -40,6 +41,10 @@ const styles = StyleSheet.create({
   image: {
     width: screenWidth,
     height: screenHeight,
+  },
+  scrollContainer: {
+    flexGrow: 1,
+    paddingBottom: 150, // Ajusta según sea necesario para evitar que el pie de página se superponga
   },
 });
 

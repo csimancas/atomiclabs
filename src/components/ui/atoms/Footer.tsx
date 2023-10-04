@@ -1,8 +1,10 @@
 import React from 'react';
+import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
 
-import {View, Text, StyleSheet, Image} from 'react-native';
 const linkedin = require('../../../assets/linkedin.png');
 const twitter = require('../../../assets/twitter.png');
+
+const {height, width} = Dimensions.get('window');
 
 const Footer = () => {
   return (
@@ -21,33 +23,32 @@ const Footer = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    height: 180,
     backgroundColor: '#000',
     alignItems: 'center',
-
-    bottom: 0,
+    justifyContent: 'flex-end',
+    paddingVertical: '8%', // Ajustar el espacio entre el texto y los iconos sociales
   },
   text: {
     color: 'white',
     fontSize: 14,
-    padding: 15,
+    paddingHorizontal: width * 0.03,
   },
   textDecoration: {
     textDecorationLine: 'underline',
     color: 'white',
-    fontSize: 14,
+    fontSize: 12,
   },
   image: {
-    width: 25,
-    height: 25,
-    marginTop: 10,
+    width: width * 0.04,
+    height: width * 0.04,
+    marginTop: height * 0.01,
+    marginBottom: height * 0.04,
   },
   socialIconsView: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginBottom: 20,
-    width: 100,
+    marginBottom: height * 0.02,
+    width: width * 0.3,
   },
 });
 

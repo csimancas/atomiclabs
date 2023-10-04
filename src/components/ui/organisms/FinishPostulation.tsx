@@ -10,21 +10,21 @@ import {
 } from 'react-native';
 import Footer from '../atoms/Footer';
 import AstroChair from '../atoms/AstroChair';
-
-import {colors} from '../../../utils/colors';
 import SendDataText from '../atoms/SendDataText';
+import {colors} from '../../../utils/colors';
 
 const image = require('../../../assets/background.png');
 const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
+
 const FinishPostulation = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-        <ScrollView>
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
           <SendDataText />
           <View style={styles.textContainer}>
             <Text style={styles.title}>
-              En breve recibiras un correo de confirmación por parte del equipo
+              En breve recibirás un correo de confirmación por parte del equipo
               de AtomicLabs.
             </Text>
             <Text style={styles.title}>
@@ -43,17 +43,22 @@ const FinishPostulation = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'black',
   },
   image: {
     width: screenWidth,
     height: screenHeight,
+  },
+  scrollContainer: {
+    flexGrow: 1,
+    paddingBottom: 100, // Ajusta según sea necesario para evitar que el pie de página se superponga
   },
   textContainer: {
     width: '100%',
     padding: 15,
   },
   title: {
-    fontSize: 18,
+    fontSize: 18, // Ajusta el tamaño de la fuente según el tamaño de la pantalla
     textAlign: 'left',
     letterSpacing: 2,
     color: colors.white,
