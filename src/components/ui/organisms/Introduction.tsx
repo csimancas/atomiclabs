@@ -37,8 +37,8 @@ const Introduction = () => {
           <TeamImage />
           <Button />
           <OurTeam />
-          <Footer />
         </ScrollView>
+        <Footer />
       </ImageBackground>
     </SafeAreaView>
   );
@@ -47,11 +47,9 @@ const Introduction = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'black',
   },
   image: {
-    flex: 1,
     width: screenWidth,
     height: screenHeight,
   },

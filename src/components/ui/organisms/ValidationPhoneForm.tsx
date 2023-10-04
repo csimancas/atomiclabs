@@ -25,8 +25,8 @@ const ValidationPhoneForm = () => {
             orangeTitle="CELULAR"
           />
           <PhoneForm />
-          <Footer />
         </ScrollView>
+        <Footer />
       </ImageBackground>
     </SafeAreaView>
   );
@@ -35,9 +35,9 @@ const ValidationPhoneForm = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'black',
   },
   image: {
-    flex: 1,
     width: screenWidth,
     height: screenHeight,
   },

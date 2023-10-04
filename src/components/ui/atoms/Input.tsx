@@ -33,10 +33,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     borderColor: colors.white,
-    height: 55,
+    height: 35,
     backgroundColor: colors.white,
     borderRadius: 7,
-    marginBottom: 10,
+    marginBottom: 5,
   },
   title: {
     color: colors.white,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    height: 40,
+    height: 10,
     paddingHorizontal: 10,
   },
   icon: {

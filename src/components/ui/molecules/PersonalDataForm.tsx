@@ -15,7 +15,10 @@ const PersonalDataForm = () => {
         Queremos saber que eres tu, porfavor {'\n'} ingresa los siguientes datos
       </Text>
 
-      <View>
+      <View
+        style={{
+          paddingHorizontal: 15,
+        }}>
         <Input placeholder="Nombre (s)" />
         <Input placeholder="Apellidos" />
       </View>
@@ -24,7 +27,6 @@ const PersonalDataForm = () => {
         title="Enviar"
         action={() => navigation.navigate('ValidatePhone')}
       />
-
       <AstroImageData />
     </View>
   );
@@ -32,19 +34,17 @@ const PersonalDataForm = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 30,
     width: '100%',
-    paddingHorizontal: 10,
+    paddingHorizontal: 15,
   },
   title: {
-    fontSize: 18,
+    fontSize: 16,
     textAlign: 'left',
-    letterSpacing: 1,
+    letterSpacing: 2,
     color: colors.white,
     fontWeight: '700',
-    marginBottom: 20,
+    marginBottom: 10,
   },
-  buttonContainer: {},
 });
 
 export default PersonalDataForm;

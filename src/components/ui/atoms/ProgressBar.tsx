@@ -45,7 +45,7 @@ const ProgressBar = ({progress, whiteTitle, orangeTitle, step}: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 150,
+    // height: 1,
     marginTop: 40,
     paddingHorizontal: 10,
   },
@@ -77,14 +77,14 @@ const styles = StyleSheet.create({
     backgroundColor: colors.orange,
   },
   stepOne: {
-    height: 40,
-    width: 40,
+    height: 30,
+    width: 30,
   },
   containerText: {
     paddingTop: 30,
     paddingHorizontal: 15,
     textAlign: 'left',
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
     color: colors.white,
     letterSpacing: 2.5,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   orangeOne: {
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
     color: colors.orange,
   },

@@ -19,7 +19,7 @@ const TextIntroduction = () => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 30,
+    marginTop: 20,
     paddingHorizontal: 15,
     textAlign: 'justify',
     fontSize: 44,

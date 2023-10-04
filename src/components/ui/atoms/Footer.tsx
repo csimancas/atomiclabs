@@ -22,14 +22,16 @@ const Footer = () => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: 150,
+    height: 180,
     backgroundColor: '#000',
     alignItems: 'center',
+
+    bottom: 0,
   },
   text: {
     color: 'white',
     fontSize: 14,
-    padding: 30,
+    padding: 15,
   },
   textDecoration: {
     textDecorationLine: 'underline',
@@ -39,11 +41,12 @@ const styles = StyleSheet.create({
   image: {
     width: 25,
     height: 25,
-    marginTop: 20,
+    marginTop: 10,
   },
   socialIconsView: {
     flexDirection: 'row',
     justifyContent: 'space-around',
+    marginBottom: 20,
     width: 100,
   },
 });

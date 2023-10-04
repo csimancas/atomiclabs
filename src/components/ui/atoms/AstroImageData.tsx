@@ -1,13 +1,26 @@
 import React from 'react';
-import {View, Image} from 'react-native';
+import {View, Image, StyleSheet} from 'react-native';
 
 const astroImg = require('../../../assets/sitAstro.png');
 const AstroImageData = () => {
   return (
-    <View>
-      <Image source={astroImg} resizeMode="contain" />
+    <View style={styles.container}>
+      <Image source={astroImg} resizeMode="contain" style={styles.image} />
     </View>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    height: 400,
+    width: 200,
+    position: 'absolute',
+    top: 210,
+    left: 100,
+  },
+  image: {
+    width: 200,
+    height: 400,
+  },
+});
 export default AstroImageData;
