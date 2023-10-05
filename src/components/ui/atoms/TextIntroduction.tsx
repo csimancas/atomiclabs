@@ -7,7 +7,8 @@ const TextIntroduction = () => {
     <Text style={styles.container}>
       <Text>
         <Text style={styles.title}>Desarrolla todo{'\n'}</Text>
-        <Text style={styles.orangeOne}>tu PONTENCIAL</Text> dentro del equipo
+        <Text style={styles.orangeOne}>tu PONTENCIAL{'\n'}</Text> dentro del
+        equipo
         {'\n'}
         <Text style={styles.orangeTwo}>
           ATOMIC<Text style={{color: colors.white}}>LABS</Text>
@@ -22,20 +23,20 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingHorizontal: 15,
     textAlign: 'justify',
-    fontSize: 44,
+    fontSize: 38,
     fontWeight: 'bold',
     color: colors.white,
-    letterSpacing: 2.5,
+    //letterSpacing: ,
   },
   title: {
-    letterSpacing: 5,
+    letterSpacing: 4,
   },
   orangeOne: {
-    fontSize: 48,
+    fontSize: 38,
     color: colors.orange,
   },
   orangeTwo: {
-    fontSize: 50,
+    fontSize: 38,
     color: colors.orange,
     letterSpacing: 7,
   },
