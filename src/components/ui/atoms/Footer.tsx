@@ -26,9 +26,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    paddingVertical: '8%',
   },
   text: {
+    marginTop: 10,
     color: 'white',
     fontSize: 14,
     paddingHorizontal: width * 0.03,

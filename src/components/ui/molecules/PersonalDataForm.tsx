@@ -28,9 +28,7 @@ const PersonalDataForm = () => {
           onChangeText={text => setLastName(text)}
         />
       </View>
-
       <OrangeButton title="Enviar" action={() => handleSendName()} />
-      <AstroImageData />
     </View>
   );
 };
@@ -49,7 +47,7 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
     color: colors.white,
     fontWeight: '700',
-    marginBottom: 10,
+    // marginBottom: 10,
   },
 });
 
