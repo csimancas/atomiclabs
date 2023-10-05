@@ -19,10 +19,10 @@ const OrangeButton = ({action, title}: Props) => {
 
 const styles = StyleSheet.create({
   buttonContainer: {
+    zIndex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 15,
-    zIndex: 1,
   },
   container: {
     backgroundColor: colors.orange,
