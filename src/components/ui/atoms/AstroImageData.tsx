@@ -12,11 +12,8 @@ const AstroImageData = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 400,
-    width: 200,
-    position: 'absolute',
-    top: 210,
-    left: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   image: {
     width: 200,

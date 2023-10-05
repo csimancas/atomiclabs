@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    paddingVertical: '8%', // Ajustar el espacio entre el texto y los iconos sociales
+    paddingVertical: '8%',
   },
   text: {
     color: 'white',

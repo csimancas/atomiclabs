@@ -10,6 +10,7 @@ import ProgressBar from '../atoms/ProgressBar';
 import PersonalDataForm from '../molecules/PersonalDataForm';
 
 import Footer from '../atoms/Footer';
+import AstroImageData from '../atoms/AstroImageData';
 
 const image = require('../../../assets/background.png');
 const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
@@ -25,6 +26,7 @@ const WeWantoToKnowYou = () => {
             orangeTitle="CONOCER"
           />
           <PersonalDataForm />
+          <AstroImageData />
         </ScrollView>
         <Footer />
       </ImageBackground>
@@ -34,11 +36,13 @@ const WeWantoToKnowYou = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: 'black',
   },
   image: {
-    width: screenWidth,
-    height: screenHeight,
+    width: '100%',
+    height: '100%',
   },
 });
 
