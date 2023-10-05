@@ -5,8 +5,8 @@ import {colors} from '../../../utils/colors';
 const Lock = require('../../../assets/iconLock.png');
 
 interface Props {
-  placeholder?: string;
-  value?: string;
+  placeholder: string;
+  value: string;
   onChangeText?: (text: string) => void;
 }
 const TextInputWithIcon = ({placeholder, value, onChangeText}: Props) => {
@@ -31,12 +31,21 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: colors.white,
+
+    height: 35,
+    borderRadius: 7,
+    marginBottom: 10,
+  },
+  isValid: {
+    flexDirection: 'row',
+    alignItems: 'center',
     borderWidth: 1,
     borderColor: colors.white,
     height: 35,
     backgroundColor: colors.white,
     borderRadius: 7,
-    marginBottom: 5,
+    marginBottom: 10,
   },
   title: {
     color: colors.white,
@@ -45,8 +54,11 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   input: {
-    flex: 1,
-    height: 10,
+    width: '90%',
+    borderRadius: 7,
+    color: 'black',
+    backgroundColor: colors.white,
+    height: 35,
     paddingHorizontal: 10,
   },
   icon: {

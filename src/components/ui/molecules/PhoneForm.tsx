@@ -2,7 +2,8 @@ import React from 'react';
 import {View, StyleSheet, Text, Dimensions} from 'react-native';
 import {colors} from '../../../utils/colors';
 
-import {useNavigation} from '@react-navigation/native';
+import usePhoneData from '../../../hooks/usePhoneData';
+
 import Input from '../atoms/Input';
 import OrangeButton from '../atoms/OrangeButton';
 import AstroMoonImage from '../atoms/AstroMoonImage';
@@ -10,7 +11,7 @@ import AstroMoonImage from '../atoms/AstroMoonImage';
 const {width} = Dimensions.get('window');
 
 const PhoneForm = () => {
-  const navigation: any = useNavigation();
+  const {phone, setPhone, validatePhone} = usePhoneData();
 
   return (
     <View style={styles.container}>
@@ -21,12 +22,13 @@ const PhoneForm = () => {
         Ingresa tu número a 10 dígitos y te enviaremos un código SMS
       </Text>
       <View style={styles.inputContainer}>
-        <Input placeholder="Número de Celular" />
+        <Input
+          placeholder="Número de Celular"
+          value={phone}
+          onChangeText={text => setPhone(text)}
+        />
       </View>
-      <OrangeButton
-        title="Continuar"
-        action={() => navigation.navigate('CompletePostulation')}
-      />
+      <OrangeButton title="Continuar" action={() => validatePhone()} />
       <View
         style={{
           alignItems: 'center',
@@ -41,8 +43,6 @@ const PhoneForm = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
     paddingHorizontal: width * 0.05,
   },
   title: {
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     marginBottom: width * 0.03,
   },
   inputContainer: {
-    marginBottom: width * 0.05,
+    marginBottom: width * 0.03,
   },
 });
 
